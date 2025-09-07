@@ -108,6 +108,26 @@ GROUP BY age
 HAVING MAX(followers) > 500;
 
 
+-- General Order
+
+SELECT age, MAX(followers) FROM user
+GROUP BY age
+HAVING MAX(followers) > 500
+ORDER BY age;
+
+
+-- Update Table
+
+UPDATE user
+SET followers = 725
+WHERE age = 19;
+
+SET SQL_SAFE_UPDATES = 0;
+
+SELECT name, age, followers
+FROM user
+WHERE age = 19;
+
 
 
 
