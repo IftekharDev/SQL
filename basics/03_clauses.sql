@@ -175,6 +175,11 @@ ALTER TABLE user
 MODIFY followers INT DEFAULT 0;
 
 
+-- Truncate table
+
+TRUNCATE TABLE user;
+
+
 
 
 
