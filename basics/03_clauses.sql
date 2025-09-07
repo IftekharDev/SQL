@@ -128,9 +128,14 @@ SELECT name, age, followers
 FROM user
 WHERE age = 19;
 
+-- Delete Table
 
+DELETE FROM user
+WHERE age<15 AND followers<200;
 
-
+SELECT name, age , followers
+FROM user
+WHERE age<15 AND followers<200;
 
 
 
