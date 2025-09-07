@@ -138,5 +138,46 @@ FROM user
 WHERE age<15 AND followers<200;
 
 
+-- Alter Table
+
+ALTER TABLE user
+ADD COLUMN city VARCHAR(40) DEFAULT "Delhi";
+
+SELECT * FROM user;
+
+
+ALTER TABLE user
+DROP COLUMN city;
+
+
+ALTER TABLE user
+RENAME TO instaUser;
+
+ALTER TABLE instaUser
+RENAME TO user;
+
+
+ALTER TABLE user
+CHANGE COLUMN followers subs INT DEFAULT 0;
+
+ALTER TABLE user
+CHANGE COLUMN subs followers INT DEFAULT 0;
+
+
+ALTER TABLE user
+MODIFY followers INT DEFAULT 5;
+
+INSERT INTO user
+(id, name, age, email, following) VALUES
+(27, "Furquan Shaikh", 25, "shaikhf@gmail.com", 625);
+
+ALTER TABLE user
+MODIFY followers INT DEFAULT 0;
+
+
+
+
+
+
 
 
