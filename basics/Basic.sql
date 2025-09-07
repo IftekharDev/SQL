@@ -1,3 +1,5 @@
+-- ---------------------Data Base Queries -------------
+
 CREATE DATABASE college;
 
 USE college;
@@ -25,6 +27,10 @@ SHOW TABLES;
 
 CREATE DATABASE IF NOT EXISTS Instagram;
 
+
+-- --------------------Create Table ------------------------
+
+
 USE Instagram;
 
 CREATE TABLE user (
@@ -45,6 +51,9 @@ content VARCHAR(150),
 user_id INT,
 FOREIGN KEY (user_id) REFERENCES user(id)
 );
+
+
+-- ---------- Insert Query -----------------------------------
 
 INSERT INTO user
 (id, name, age, email, followers, following)
@@ -75,6 +84,9 @@ VALUES
 (24, "Isha Chatterjee", 16, "isha.chatterjee@gmail.com", 234, 187),
 (25, "Rahul Saxena", 20, "rahul.saxena@yahoo.in", 543, 321);
 
+
+
+-- --------------- Select Queries ---------------------------------------
 
 SELECT id, name , email FROM user;
 
