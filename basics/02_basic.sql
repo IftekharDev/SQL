@@ -4,7 +4,7 @@
 USE college;
 
 CREATE TABLE branch (
-branchId int PRIMARY KEY,
+branchId INT PRIMARY KEY,
 branchName VARCHAR(50),
 HOD VARCHAR(30)
 );
@@ -168,6 +168,60 @@ VALUES
 (89, 'Tariq Khan', 6, '2000-02-20', 4321098751, '2015, Urban Oasis, Bhopal');
 
 
+
+
+-- --- Select Query
+
+SELECT * FROM branch;
+
+SELECT * FROM student;
+
+SELECT branchName, HOD FROM branch;
+
+SELECT studentName, branch, contactNo FROM student;
+
+
+SELECT * FROM branch WHERE HOD = "Dr. Imran Rahman";
+
+SELECT * FROM student WHERE branch = 1;
+SELECT * FROM student WHERE studentName = "Aisha Khan";
+SELECT * FROM student WHERE studentId = 89;
+
+
+-- Update query
+
+UPDATE student set contactNo = 9867432345 where studentId = 23;
+
+
+-- Delete query
+
+DELETE FROM student WHERE studentId = 89;
+
+
+-- Delete table
+
+DROP TABLE student;
+
+
+-- Empty the table
+
+TRUNCATE TABLE student;
+
+
+-- Delete database
+
+DROP DATABASE college;
+
+
+-- Alter Query
+-- Add Column
+
+ALTER TABLE branch aDD HODSalary int;
+
+
+-- Delete Column
+
+ALTER TABLE branch DROP COLUMN HODSalary;
 
 
 
