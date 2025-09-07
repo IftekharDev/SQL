@@ -88,6 +88,17 @@ SELECT AVG(age) FROM user;
 SELECT SUM(followers) FROM user;
 
 
+-- Group By Clause
+
+SELECT age, count(id) FROM user
+GROUP BY age;
+
+SELECT age, count(id) FROM user
+GROUP BY age
+ORDER BY count(id);
+
+SELECT age, max(followers) FROM user
+GROUP BY age;
 
 
 
