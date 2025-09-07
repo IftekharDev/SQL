@@ -48,8 +48,14 @@ SELECT name, age, followers FROM user
 WHERE age NOT IN (14, 17, 24);
 
 
+-- Limit clause
+
+SELECT name, age, followers FROM user
+WHERE age>21 LIMIT 10;
 
 
+SELECT name, age, followers FROM user
+LIMIT 10;
 
 
 
