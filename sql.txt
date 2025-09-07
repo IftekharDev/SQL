@@ -1,0 +1,159 @@
+
+-------------------------------- DBMS - SQL --------------------------------
+
+SQL stands for Structured Query Language. It is the standard language for relational 
+database management systems. It is especially useful in handling organized 
+data comprised of entities (variables) and relations between different entities 
+of the data.
+
+
+* What is Database?
+A database is an organized collection of data, stored and retrieved digitally from a
+remote or local computer system.
+
+
+* What is DBMS?
+DBMS stands for Database Management System. DBMS is a system software responsible 
+for the creation, retrieval, updation, and management of the database. It ensures 
+that our data is consistent, organized, and is easily accessible by serving as an 
+interface between the database and its end-users or application software.
+
+
+* What is RDBMS?
+RDBMS stands for Relational Database Management System. RDBMS stores data in the 
+form of a collection of tables, and relations can be defined between the 
+common fields of these tables. Most modern database management systems like MySQL, 
+Microsoft SQL Server, Oracle are based on RDBMS.
+
+
+* Advantages of DBMS:
+1. Controls database redundancy
+2. Data sharing
+3. Easy maintenance
+4. Reduce time
+5. Provides backup
+6. Multiple User Interface
+
+
+* Data Corruption: It arises when there is an accidental deletion of data or 
+  any changes made into the database. 
+
+
+* Data Redundancy: When same piece of data exists in multiple tables of a 
+  database in multiple forms, it will lead to data redundancy. 
+
+
+* What are Tables and Fields?
+A table is an organized collection of data stored in the form of rows and columns.
+Columns can be categorized as vertical and rows as horizontal. The columns in a 
+table are called fields while the rows can be referred to as records.
+
+
+* What are Constraints in SQL?
+It refers to a set of rules for the data in a table. Constraints are used to 
+limit the type of a data so that the data consistency is not disturbed. 
+The constraints are:
+
+
+1. NOT NULL - Restricts NULL value from being inserted into a column.
+
+2. CHECK - Verifies that all values in a field satisfy a condition.
+
+3. DEFAULT - Automatically assigns a default value if no value has been 
+   specified for the field.
+
+4. UNIQUE CONSTRAINT - It is a constraint which ensures that all the values in 
+   a column should be different. It is used to restrict a repeated data in a 
+   particular column.
+
+5. INDEX - It is used to locate and access the data in a database. Indexes 
+   are created using a few database columns.
+
+6. PRIMARY KEY - Uniquely identifies each record in a table.
+
+7. FOREIGN KEY - It is the key of one table whose values are derived from the 
+   primary key of another table to relate the two tables.
+
+
+* What is a Join? List its different types.
+  The SQL Join clause is used to combine records (rows) from two or more tables in 
+  a SQL database based on a related column between the two.
+  There are three different types of JOINs in SQL:
+
+
+1. (INNER) JOIN: Retrieves records that have matching values in both tables 
+   involved in the join. This is the widely used join for queries.
+
+
+2. OUTER JOIN: There are three types of outer joins:
+		a. LEFT (OUTER) JOIN: Retrieves all the records/rows from the left 
+		and the matched records/rows from the right table.
+
+		b. RIGHT (OUTER) JOIN: Retrieves all the records/rows from the right 
+		and the matched records/rows from the left table.
+   		
+		c. FULL (OUTER) JOIN: Retrieves all the records where there is a match 
+		in either the left or right table.
+
+
+3. CROSS JOIN : Returns the cartesian product of the tables involved in the joins
+
+
+* Select Command:
+  The select statement is used to select data from a database.
+
+1. Every table is broken up into smaller entities called fields.
+2. A field is a column in a table.
+3. A record is a horizontal entity in a table.
+4. A column is a vertical entity in a table.
+
+
+* Keywords/SQL Commands: 
+  SQL keywords are NOT case sensitive: select is the same as SELECT
+  Some Important SQL Commands:
+
+1. SELECT - extracts data from a database
+2. UPDATE - updates data in a database
+3. DELETE - deletes data from a database
+4. INSERT INTO - inserts new data into a database
+5. CREATE DATABASE - creates a new database
+6. ALTER DATABASE - modifies a database
+7. CREATE TABLE - creates a new table
+8. ALTER TABLE - modifies a table
+9. DROP TABLE - deletes a table
+10. CREATE INDEX - creates an index (search key)
+11. DROP INDEX - deletes an index
+
+
+* SELECT DISTINCT: It is used to return only distinct values 
+  (if a column contains many duplicate values)
+
+
+* WHERE: It is used to extract only those records which 
+  fulfill a specified condition. Operators Used in WHERE:
+1. = : Equal
+2. < : Less than
+3. > : Greater than
+4. <= : Less than or equal
+5. >= : Greater than or equal
+6. <> : Not equal
+7. BETWEEN : between a certain range
+8. LIKE : Search for a pattern
+9. IN : To specify multiple possible values for a column
+10. Not in can be used to specify values not required.
+
+
+* AND, OR, NOT Operators:
+1. AND- Displays a record if all conditions separated by AND are True.
+2. OR- Displays a record if any of the conditions separated by OR is True.
+3. NOT- Displays a record if condition is Not True.
+
+
+* Aggregate Functions:
+An aggregate function in SQL performs a calculation on multiple values and returns a 
+single value. SQL provides many aggregate functions that include-
+1. COUNT() - The COUNT() function returns the number of rows in a database table.
+2. MAX() - The MAX() function returns the highest value (maximun) in a set.
+3. MIN() - The MIN() function returns the lowest value (minimum) in a set.
+4. SUM() - The SUM() function returns the total sum of a numeric column.
+5. AVG() - The AVG() function returns the average value of a numeric column.
