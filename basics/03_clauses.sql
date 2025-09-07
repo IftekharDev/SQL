@@ -58,6 +58,40 @@ SELECT name, age, followers FROM user
 LIMIT 10;
 
 
+-- Order By Clause
+
+SELECT name, age, followers FROM user
+ORDER BY followers ASC;
+
+
+SELECT name, age, followers FROM user
+ORDER BY followers DESC;
+
+SELECT name, age, followers FROM user
+ORDER BY followers;						-- Default sorting ASC.
+
+
+
+-- Aggregate Functions
+
+SELECT MAX(followers) FROM user;
+
+SELECT MAX(age) FROM user;
+
+SELECT COUNT(age) FROM user
+WHERE age > 21;
+
+SELECT MIN(age) FROM user;
+
+SELECT AVG(age) FROM user;
+
+SELECT SUM(followers) FROM user;
+
+
+
+
+
+
 
 
 
