@@ -180,9 +180,91 @@ MODIFY followers INT DEFAULT 0;
 TRUNCATE TABLE user;
 
 
+-- Practice Question
+
+USE college;
+
+CREATE TABLE teacher (
+id INT PRIMARY KEY,
+name VARCHAR(50),
+subject VARCHAR(50),
+salary INT
+);
+
+INSERT INTO teacher
+(id, name, subject, salary)
+VALUES 
+(23, "Ajay", "Math", 50000),
+(47, "Bharat", "English", 60000),
+(18, "Chetan", "Chemistry", 45000),
+(9, "Divya", "Physics", 75000);
+
+SELECT * FROM teacher;
+
+SELECT * FROM teacher
+WHERE salary > 55000;
+
+ALTER TABLE teacher
+CHANGE COLUMN salary ctc INT;
+
+ALTER TABLE teacher
+CHANGE COLUMN ctc salary INT;
+
+UPDATE teacher
+SET salary = (salary + salary/4);
+
+ALTER TABLE teacher
+ADD COLUMN city VARCHAR(50) DEFAULT "Gurgaon";
+
+ALTER TABLE teacher
+DROP COLUMN city;
 
 
 
+-- ----------------------------------------------
 
+CREATE TABLE studentInfo( 
+roll_no INT PRIMARY KEY,
+name VARCHAR(50),
+city VARCHAR(50),
+marks INT
+);
 
+INSERT INTO studentInfo
+(roll_no, name, city, marks)
+VALUES
+(110, "Adam", "Delhi", 76),
+(108, "Bob", "Mumbai", 65),
+(124, "Casey", "Pune", 94),
+(112, "Duke", "Pune", 80);
+
+SELECT * FROM studentInfo;
+
+SELECT * FROM studentInfo
+WHERE marks >= 75;
+
+SELECT DISTINCT city FROM studentInfo;
+
+SELECT city, COUNT(roll_no) FROM studentInfo
+GROUP BY city;
+
+SELECT city, MAX(marks) FROM studentInfo
+GROUP BY city;
+
+SELECT AVG(marks) FROM studentInfo;
+
+ALTER TABLE studentInfo
+ADD COLUMN grade VARCHAR(30);
+
+UPDATE studentInfo
+SET grade = "O"
+WHERE marks > 80;
+
+UPDATE studentInfo
+SET grade = "A"
+WHERE marks BETWEEN 70 AND 80;
+
+UPDATE studentInfo
+SET grade = "B"
+WHERE marks BETWEEN 60 AND 69;
 
